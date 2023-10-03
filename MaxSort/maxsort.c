@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdbool.h>
-#include "../ArrayLib/randArr.c"
+#include "../ArrayLib/randArr.h"
 
 const int LENGHT = 10;
 
@@ -9,7 +8,7 @@ int findMax(int *A, size_t size){
     int max = A[0]; // initialize max value
     size_t index = 0;// init index of max to 0
     for (size_t i = 0; i < size; i++){
-        if (*(A+i) > max){
+        if (*(A+i) > max){  
             max = *(A+i);
             index = i;
         }

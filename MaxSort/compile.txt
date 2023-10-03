@@ -1,0 +1,2 @@
+per creare eseguibile, linkare libreria esterna array:
+    gcc -o sort maxsort.c ../ArrayLib/randArr.c
