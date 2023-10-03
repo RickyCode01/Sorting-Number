@@ -2,7 +2,6 @@
 #include <stdio.h>
 #include <string.h>
 #include <time.h>
-#include <stdbool.h>
 #include "randArr.h"
 
 void printArray(int *A, int start, int end, bool space){ // function to print array
@@ -34,6 +33,6 @@ int * randIntArr(int len, int min, int max){
 
 // int main(int argc, char const *argv[])
 // {
-    // randIntArr(10, -10, 10);   
-    // return 0;
+//     int *A = randIntArr(10, -10, 10); 
+//     return 0;
 // }

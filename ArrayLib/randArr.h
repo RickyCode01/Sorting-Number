@@ -1,4 +1,5 @@
 /* header file to use functions in randArr */
+#include <stdbool.h>
 
 /* function to get a random intger array -> return pointer to array
 min/max = minimum/maximum value of int */
