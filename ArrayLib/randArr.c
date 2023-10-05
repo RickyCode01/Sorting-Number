@@ -18,9 +18,13 @@ void printArray(int *A, int start, int end, bool space){ // function to print ar
      
 }
 
+int * zeroArray(int len){
+    int * A = (int *) calloc((size_t) len, sizeof(int));
+    return A;
+}
+
 int * randIntArr(int len, int min, int max){
-    int * array = (int *) calloc((size_t) len, sizeof(int));
-    array = memset(array, 0,(size_t) len);
+    int * array = zeroArray(len);
     /* initialize random number generator */
     srand((unsigned) time(NULL));
     /* fill array w random number */
@@ -33,6 +37,8 @@ int * randIntArr(int len, int min, int max){
 
 // int main(int argc, char const *argv[])
 // {
-//     int *A = randIntArr(10, -10, 10); 
+//     // int *A = randIntArr(10, -10, 10); 
+//     int *A = zeroArray(10);
+//     printArray(A, 0, 10, false);
 //     return 0;
 // }

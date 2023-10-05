@@ -1,6 +1,8 @@
 /* header file to use functions in randArr */
 #include <stdbool.h>
 
+// function to create an array initilized to zero value
+extern int * zeroArray(int len);
 /* function to get a random intger array -> return pointer to array
 min/max = minimum/maximum value of int */
 extern int *randIntArr(int len, int min, int max);
