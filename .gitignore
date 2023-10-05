@@ -4,3 +4,5 @@
 # Binary file
 *.out 
 
+# Apple files
+.DS_Store
