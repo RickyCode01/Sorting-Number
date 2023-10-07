@@ -18,6 +18,12 @@ void printArray(int *A, int start, int end, bool space){ // function to print ar
      
 }
 
+void Swap(int *A, int a, int b){ // swap element a with element b
+    int temp = *(A+a); // saving a in a temporary variable
+    *(A+a) = *(A+b); // a <- b
+    *(A+b) = temp; // b <- b
+}
+
 int * zeroArray(int len){
     int * A = (int *) calloc((size_t) len, sizeof(int));
     return A;

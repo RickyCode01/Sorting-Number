@@ -9,11 +9,6 @@ viene eseguito l'odinamento */
 #include <stdio.h>
 #include "../ArrayLib/randArr.h"
 
-void swap(int *A, int a, int b){
-    int temp = *(A+a);
-    *(A+a) = *(A+b);
-    *(A+b) = temp; 
-}
 
 int Partition(int *A, int start, int end){
   int pivot = *(A+start); // scelgo il pivot come primo valore dell'array
@@ -23,7 +18,7 @@ int Partition(int *A, int start, int end){
     while (A[j] > pivot)j--; // decremento a dx finchè trovo un valore > pivot
     if(i < j){ // se non ho superato il pivot
       printf("i:%d -> j:%d\n", i, j);
-      swap(A, i, j); // scambio gli elementi: pivot -> elemento dx > del pivot
+      Swap(A, i, j); // scambio gli elementi: pivot -> elemento dx > del pivot
       printArray(A, start, end+1, false);
       i++; // incremento l'indice sx perchè questo elemento è ordinato rispetto al pivot
     }
@@ -32,7 +27,7 @@ int Partition(int *A, int start, int end){
     while(A[i] < pivot)i++;
     if(i < j){
       printf("i:%d -> j:%d\n", i, j);
-      swap(A, i, j);
+      Swap(A, i, j);
       printArray(A, start, end+1, false);
       j--;
     }
