@@ -1,18 +1,9 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-const int LENGHT = 10;
-
-void printArr(int A[LENGHT]){
-    for(int i = 0; i<LENGHT; i++){
-        if (i != LENGHT-1) printf("%d,", A[i]);
-        else printf("%d\n", A[i]);
-    }
-}
-
-void InsertionSort(int *A){
+void InsertionSort(int *A, int start, int end){
     int i,j,key; // variables used in algorithm
-    for(i=1; i<LENGHT; i++){
+    for(i=start; i<end; i++){
         key = *(A+i);
         // printf("chiave=%d\n",key);
         j = i-1; //index of end of subarray
@@ -24,11 +15,11 @@ void InsertionSort(int *A){
     }
 }
 
-int main(int argc, char const *argv[])
+/* int main(int argc, char const *argv[])
 {   
-    int testArray[LENGHT] = {0, -1, 2, -3, -5, 3, 10, 9, 3, -1};
+    int testArray[10] = {0, -1, 2, -3, -5, 3, 10, 9, 3, -1};
     printArr(testArray);
-    InsertionSort(&testArray);
+    InsertionSort(&testArray, 0, 10);
     printArr(testArray);
     return 0;
-}
+} */
